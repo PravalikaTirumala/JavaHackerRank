@@ -1,4 +1,9 @@
-
+/**
+ * Any  grade less than 40  is a failing grade, If the difference between the  grade and the next 
+ * multiple of 5 is less than 3, round  grade up to the next multiple of 5 . 
+ * 
+ * Pravalika Tirumala
+ */
 import java.io.*;
 import java.math.*;
 import java.text.*;
