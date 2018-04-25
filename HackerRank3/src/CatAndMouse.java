@@ -22,6 +22,8 @@ public class CatAndMouse {
             else
                 res = "Mouse C";
         }
+        
+      
         return res;
     }
 
