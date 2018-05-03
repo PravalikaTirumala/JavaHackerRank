@@ -3,6 +3,7 @@ import java.io.*;
  * Pravalika Tirumala
  * Question : refer to code interview questions folder - Lone Integer
  * Print the unique number that occurs only once in  on a new line.
+ * Clue : val ^ 0 = val : val ^ val =0 (^ xor)
  */
 import java.util.*;
 import java.text.*;

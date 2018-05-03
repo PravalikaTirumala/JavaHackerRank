@@ -1,5 +1,6 @@
-/* Hidden stub code will pass a root argument to the function below. Complete the function to solve the challenge. Hint: you may want to write one or more helper functions.  
-
+/* Hidden stub code will pass a root argument to the function below. Complete the function to solve the
+ *  challenge. Hint: you may want to write one or more helper functions.  
+ * checkBST(Node node) - required code for Hacker Rank challenge
 The Node class is defined as follows:*/
 
     class Node {
@@ -16,7 +17,7 @@ The Node class is defined as follows:*/
    
      public class BinarySearchTree{
     	 Node root;
-    	// boolean res=false;
+    	
      
     	 @SuppressWarnings("static-access")
 		public static void main(String [] args){
@@ -72,35 +73,17 @@ The Node class is defined as follows:*/
 			
 		}
 
-	public static boolean checkBST(Node root) {
-		boolean res= false;
-		if(root ==null)
-         return res;
+	public static  boolean checkBST(Node root) {
+        return checkValues(root, Integer.MAX_VALUE,Integer.MIN_VALUE);
+    }
+    static boolean checkValues(Node root1,int max,int min){
+        if(root1 == null)
+            return true;
         else{
-            
-            if(root.left != null){
-            if(root.left.data == root.data)
-                return res;
-                else if(root.left.data > root.data)
-                    return res;
-                    else{
-                        checkBST(root.left);
-                    }
-            }
-             if(root.right != null){
-            if(root.right.data == root.data)
-                return false;
-                else if(root.right.data > root.data)
-                    return false;
-                    else{
-                        checkBST(root.right);
-                    }
-            }
-            
+            return root1.data > min
+                    && root1.data < max
+                    && checkValues(root1.left,root1.data,min)
+                    && checkValues(root1.right,max,root1.data);
         }
-		res=true;
-		return res;
-     
-     
     }
   }
